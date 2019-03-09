@@ -18,6 +18,6 @@ python style.py --style examples/style/cherry-tree-in-bloom-1905.jpg \
   --batch-size 20
 
 python evaluate.py --checkpoint checkpoint/model.ckpt \
-  --in-path examples/style/cherry-tree-in-bloom-1905.jpg \
+  --in-path examples/content/chicago.jpg \
   --out-path examples/results/
 
