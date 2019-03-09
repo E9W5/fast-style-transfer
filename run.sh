@@ -17,20 +17,9 @@ mkdir data
 mkdir data/bin
 
 #run style transfer on video
-#python evaluate.py --in-path examples/content/fox.mp4 \
-#  --checkpoint ./scream.ckpt \
-# --out-path /artifacts/out.mp4 \
-# --device /gpu:0 \
-# --batch-size 4 2>&1
+python evaluate.py --in-path examples/content/fox.mp4 \
+ --checkpoint ./scream.ckpt \
+ --out-path /artifacts/out.mp4 \
+ --device /gpu:0 \
+ --batch-size 4 2>&1
 
-python style.py --style examples/style/cherry-tree-in-bloom-1905.jpg \
-  --checkpoint-dir checkpoint/ \
-  --test examples/content/chicago.jpg \
-  --test-dir examples/content/testimg \
-  --content-weight 1.5e1 \
-  --checkpoint-iterations 1000 \
-  --batch-size 20
-
-python evaluate.py --checkpoint checkpoint/model.ckpt \
-  --in-path examples/style/cherry-tree-in-bloom-1905.jpg \
-  --out-path examples/results/
