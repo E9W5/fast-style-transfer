@@ -17,20 +17,11 @@ mkdir data
 mkdir data/bin
 
 #run style transfer on video
-python transform_video.py --in-path examples/content/fox.mp4 \
-  --checkpoint ./scream.ckpt \
-  --out-path /artifacts/out.mp4 \
-  --device /gpu:0 \
-  --batch-size 4 2>&1
-
-
-#run style transfer on video
 #python evaluate.py --in-path examples/content/fox.mp4 \
 #  --checkpoint ./scream.ckpt \
 # --out-path /artifacts/out.mp4 \
 # --device /gpu:0 \
 # --batch-size 4 2>&1
-
 
 python style.py --style examples/style/cherry-tree-in-bloom-1905.jpg \
   --checkpoint-dir checkpoint/ \
